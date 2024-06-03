@@ -6,7 +6,7 @@ function! OpenURLNearestToCursor()
 
   " If a URL has been found, open it in Brave
   if l:cleaned_url != ''
-      silent exec "!brave " . l:cleaned_url
+      silent exec "!brave " . fnameescape(l:cleaned_url)
       redraw!
   endif
 endfunction
