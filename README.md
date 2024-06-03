@@ -2,11 +2,13 @@
 
 https://github.com/sderev/vim-url-opener/assets/24412384/7bee709e-2878-4e7a-a42d-a375fd8959ca
 
+This setup allows you to open URLs in your web browser from Vim without having your cursor exactly under the URL.
+
 This is **not a plugin**, but a set of Unix filters following the philosophy: "Do one thing and do it well."
 
-It allows you to open URLs in your web browser from Vim. As such, there is no automated installation process. You will need to manually install the scripts and configuration. But don't worry, it's very simple and takes less than a minute.
+As such, there is no automated installation process. You will need to manually install the scripts and configuration. But don't worry, it's very simple and takes less than a minute.
 
-I created [a small blog post on my website](https://sderev.com/posts/vim-url-opener) that more or less repeats what's written here, but with more details.
+I wrote [a small blog post on my website](https://sderev.com/posts/vim-url-opener) that more or less repeats what's written here, but with more details.
 
 <!-- TOC -->
 ## Table of Contents
