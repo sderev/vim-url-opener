@@ -1,6 +1,6 @@
 # vim-url-opener
 
-<video src="https://github.com/sderev/sderev.com/blob/b9ae58a1dd3f3a1a57c43e0aaae296193e85c737/posts/vim-url-opener/videos/demo_extract_and_open_nearest_url.mp4"/>
+https://github.com/sderev/vim-url-opener/assets/24412384/7bee709e-2878-4e7a-a42d-a375fd8959ca
 
 This is **not a plugin**, but a set of Unix filters following the philosophy: "Do one thing and do it well."
 
