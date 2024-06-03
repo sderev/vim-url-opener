@@ -1,0 +1,16 @@
+" This function opens the URL nearest to the cursor in Brave 
+function! OpenURLNearestToCursor()
+  let l:line = getline('.')
+  let l:col = col('.')
+  let l:cleaned_url = system('extract_nearest_url "' . l:line . '" ' . l:col)
+
+  " If a URL has been found, open it in Brave
+  if l:cleaned_url != ''
+      silent exec "!brave " . l:cleaned_url
+      redraw!
+  endif
+endfunction
+
+" Bind the function to the `gx` key in normal mode
+nnoremap gx :call OpenURLNearestToCursor()<CR>
+"""
