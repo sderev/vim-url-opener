@@ -8,6 +8,14 @@ It allows you to open URLs in your web browser from Vim. As such, there is no au
 
 I created [a small blog post on my website](https://sderev.com/posts/vim-url-opener) that more or less repeats what's written here, but with more details.
 
+<!-- TOC -->
+## Table of Contents
+
+1. [Usage](#usage)
+1. [Get the Files](#get-the-files)
+1. [Installation and Configuration](#installation-and-configuration)
+<!-- /TOC -->
+
 ## Usage
 
 To open a URL in your web browser, just place the cursor near the URL and press `gx`. There is no need to have your cursor exactly under the URL.
