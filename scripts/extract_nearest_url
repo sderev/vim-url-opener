@@ -6,8 +6,11 @@ import sys
 
 
 def main():
-    line = sys.argv[1] if len(sys.argv) > 1 else ""
-    cursor_pos = int(sys.argv[2]) if len(sys.argv) > 2 else 0
+    line = " ".join(sys.argv[1:-1]) if len(sys.argv) > 1 else ""
+    try:
+        cursor_pos = int(sys.argv[-1])
+    except ValueError:
+        sys.exit("Error: Cursor position must be an integer")
     url = extract_nearest_url(line, cursor_pos)
     print(url, end="")  # Print without additional newline
 

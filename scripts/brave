@@ -1,4 +1,4 @@
 #!/bin/bash
 
-/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe "$1"
+/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe "$1" 2>/dev/null &
 

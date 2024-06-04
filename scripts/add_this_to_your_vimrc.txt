@@ -1,8 +1,13 @@
 " This function opens the URL nearest to the cursor in Brave 
 function! OpenURLNearestToCursor()
+  " Get the current line and column
   let l:line = getline('.')
   let l:col = col('.')
-  let l:cleaned_url = system('extract_nearest_url "' . l:line . '" ' . l:col)
+
+  " Extract the URL nearest to the cursor
+  let l:escaped_line = shellescape(l:line)
+  let l:command = 'extract_nearest_url ' . l:escaped_line . ' ' . l:col
+  let l:cleaned_url = system(l:command)
 
   " If a URL has been found, open it in Brave
   if l:cleaned_url != ''
