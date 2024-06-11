@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import re
-import shlex
 import sys
 
 
@@ -27,7 +26,7 @@ def extract_nearest_url(line, cursor_pos):
     pattern = "|".join(url_patterns)
     matches = re.finditer(pattern, line)
 
-    closest_url = None
+    nearest_url = None
     min_distance = float("inf")
 
     # Extract URL
@@ -39,14 +38,14 @@ def extract_nearest_url(line, cursor_pos):
         end_pos = match.end()
         distance = min(abs(cursor_pos - start_pos), abs(cursor_pos - end_pos))
 
-        # Update closest URL
+        # Update nearest URL
         if distance < min_distance:
             min_distance = distance
             # Clean the URL by removing any trailing punctuation and whitespace
             cleaned_url = re.sub(r"[),.\s]*$", "", url)
-            closest_url = shlex.quote(cleaned_url)
+            nearest_url = cleaned_url
 
-    return closest_url if closest_url else ""
+    return nearest_url if nearest_url else ""
 
 
 if __name__ == "__main__":
