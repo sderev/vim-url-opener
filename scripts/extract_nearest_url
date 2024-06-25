@@ -21,7 +21,6 @@ def extract_nearest_url(line, cursor_pos):
         r"<(\S+?)>",  # Angle brackets
         r"\\href\{(\S+?)\}\{.*?\}",  # LaTeX \href{}{}
         r"(http[s]?://\S+)",  # Plain URLs with protocol
-        r"(\b\S+\.\S+)\b",  # Plain URLs without protocol
     )
     pattern = "|".join(url_patterns)
     matches = re.finditer(pattern, line)
