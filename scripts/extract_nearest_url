@@ -42,7 +42,7 @@ def extract_nearest_url(line, cursor_pos):
         if distance < min_distance:
             min_distance = distance
             # Clean the URL by removing any trailing punctuation and whitespace
-            cleaned_url = re.sub(r"[),.\s]*$", "", url)
+            cleaned_url = re.sub(r"[\"),.\s]*$", "", url)
             nearest_url = cleaned_url
 
     return nearest_url if nearest_url else ""
